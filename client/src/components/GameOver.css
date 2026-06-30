@@ -1,0 +1,100 @@
+.gameover-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(249, 115, 22, 0.18), transparent 28%),
+    radial-gradient(circle at 82% 12%, rgba(37, 99, 235, 0.16), transparent 26%),
+    linear-gradient(135deg, #fff7e7 0%, #f8fbff 60%, #eef4ff 100%);
+  padding: 20px;
+}
+
+.go-container {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  padding: 36px;
+  animation: fadeIn 0.5s ease;
+}
+
+.go-confetti {
+  font-size: 32px;
+  margin-bottom: 12px;
+  animation: bounce 1s ease-in-out infinite;
+  letter-spacing: 8px;
+}
+
+.go-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+.go-winner {
+  background: #fff7e7;
+  border: 1px solid #f1d7b0;
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.winner-crown { font-size: 40px; }
+.winner-avatar { font-size: 52px; margin: 8px 0; }
+.winner-name { font-size: 26px; font-weight: 800; }
+.winner-score { font-size: 20px; color: var(--warning); font-weight: 700; margin: 4px 0; }
+.winner-label { font-size: 16px; color: var(--accent); }
+
+.leaderboard { margin-bottom: 28px; }
+
+.lb-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4d586e;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 12px;
+}
+
+.lb-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lb-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #f8fbff;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s;
+}
+.lb-item:hover { transform: translateY(-1px); }
+.lb-item.rank-1 { border-color: #f5c377; background: #fff7e7; }
+.lb-item.rank-2 { border-color: #cbd5e1; background: #f8fafc; }
+.lb-item.rank-3 { border-color: #d6a074; background: #fff2e8; }
+
+.lb-rank { font-size: 22px; width: 36px; }
+.lb-avatar { font-size: 22px; }
+.lb-name { flex: 1; font-weight: 600; text-align: left; }
+.lb-score { font-weight: 800; color: var(--warning); font-size: 16px; }
+
+.go-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+@media (max-width: 520px) {
+  .go-container {
+    padding: 24px 18px;
+  }
+
+  .go-actions {
+    flex-direction: column;
+  }
+}
