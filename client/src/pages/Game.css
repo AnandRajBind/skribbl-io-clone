@@ -201,6 +201,15 @@
   font-size: 16px;
   color: #f8fafc;
 }
+
+.waiting-inner p {
+  color: #1e3a8a;
+}
+
+.waiting-inner strong {
+  color: #1d4ed8;
+}
+
 .waiting-spinner {
   width: 40px;
   height: 40px;
