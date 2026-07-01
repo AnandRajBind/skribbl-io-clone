@@ -1,8 +1,8 @@
 .word-select-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(23, 32, 51, 0.42);
-  backdrop-filter: blur(6px);
+  background: rgba(2, 6, 23, 0.62);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,13 +16,15 @@
   max-width: 480px;
   width: 90%;
   animation: fadeIn 0.3s ease;
-  background: rgba(255,255,255,0.94);
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid #334155;
+  box-shadow: var(--shadow);
 }
 
 .ws-timer {
   font-size: 40px;
   font-weight: 800;
-  color: var(--warning);
+  color: #fbbf24;
   animation: pulse 1s ease-in-out infinite;
 }
 
@@ -30,11 +32,11 @@
   font-size: 22px;
   font-weight: 700;
   margin: 12px 0 6px;
-  color: var(--ink);
+  color: #f8fafc;
 }
 
 .ws-subtitle {
-  color: var(--text-dim);
+  color: #94a3b8;
   font-size: 14px;
   margin-bottom: 24px;
 }
@@ -49,10 +51,10 @@
   padding: 14px 24px;
   font-size: 18px;
   font-weight: 700;
-  background: #f8fbff;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--text);
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  color: #f8fafc;
   cursor: pointer;
   transition: all 0.2s;
   text-transform: capitalize;
@@ -60,8 +62,8 @@
   animation: slideIn 0.3s ease both;
 }
 .ws-word-btn:hover {
-  border-color: var(--primary);
-  background: #eef4ff;
+  border-color: rgba(99, 102, 241, 0.7);
+  background: rgba(99, 102, 241, 0.14);
   transform: translateY(-1px);
-  color: var(--primary);
+  color: #ffffff;
 }

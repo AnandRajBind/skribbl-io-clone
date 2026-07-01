@@ -6,11 +6,12 @@
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(23, 32, 51, 0.035) 1px, transparent 1px),
-    linear-gradient(rgba(23, 32, 51, 0.035) 1px, transparent 1px),
-    radial-gradient(circle at 18% 18%, rgba(249, 115, 22, 0.20), transparent 28%),
-    radial-gradient(circle at 84% 8%, rgba(37, 99, 235, 0.18), transparent 26%),
-    linear-gradient(135deg, #fff7e7 0%, #eef6ff 54%, #f7f3ea 100%);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 18% 18%, rgba(91, 108, 255, 0.32), transparent 28%),
+    radial-gradient(circle at 84% 8%, rgba(34, 211, 238, 0.16), transparent 26%),
+    radial-gradient(circle at 72% 82%, rgba(245, 158, 11, 0.14), transparent 22%),
+    linear-gradient(135deg, #08111f 0%, #0f172a 54%, #07101d 100%);
   background-size: 44px 44px, 44px 44px, auto, auto, auto;
 }
 
@@ -23,13 +24,14 @@
 .bubble {
   position: absolute;
   border-radius: 18px;
-  opacity: 0.16;
+  opacity: 0.24;
   animation: float 8s ease-in-out infinite;
   transform: rotate(8deg);
 }
-.b1 { width: 300px; height: 300px; background: var(--secondary); top: -120px; left: -90px; animation-delay: 0s; }
-.b2 { width: 220px; height: 220px; background: var(--primary); bottom: -80px; right: -60px; animation-delay: -3s; }
-.b3 { width: 150px; height: 150px; background: var(--accent); top: 54%; right: 10%; animation-delay: -6s; }
+
+.b1 { width: 300px; height: 300px; background: #5b6cff; top: -120px; left: -90px; animation-delay: 0s; }
+.b2 { width: 220px; height: 220px; background: #20c997; bottom: -80px; right: -60px; animation-delay: -3s; }
+.b3 { width: 150px; height: 150px; background: #f59e0b; top: 54%; right: 10%; animation-delay: -6s; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0) scale(1); }
@@ -60,25 +62,27 @@
   align-items: center;
   justify-content: center;
   font-size: 42px;
-  background: #ffffff;
-  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(91, 108, 255, 0.18), rgba(34, 211, 238, 0.12));
+  border: 1px solid rgba(91, 108, 255, 0.28);
   border-radius: 18px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 18px 40px rgba(4, 9, 20, 0.42);
   animation: bounce 2s ease-in-out infinite;
+  backdrop-filter: blur(14px);
 }
 
 .home-title {
   font-size: clamp(44px, 7vw, 82px);
   line-height: 0.95;
   font-weight: 800;
-  color: var(--ink);
+  color: #f8fbff;
   margin-top: 24px;
   max-width: 560px;
   letter-spacing: 0;
+  text-shadow: 0 18px 50px rgba(4, 9, 20, 0.45);
 }
 
 .home-subtitle {
-  color: #3d4659;
+  color: rgba(233, 238, 252, 0.82);
   font-size: 18px;
   margin-top: 18px;
   max-width: 440px;
@@ -86,19 +90,22 @@
 }
 
 .home-card {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(18px);
-  border: 1px solid rgba(217, 223, 235, 0.92);
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(148, 163, 184, 0.16);
   padding: 24px;
+  box-shadow: 0 28px 70px rgba(4, 9, 20, 0.42);
+  color: #f8fbff;
 }
 
 .tab-bar {
   display: flex;
-  background: #eef2f8;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
   padding: 5px;
   margin-bottom: 22px;
   gap: 4px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
 }
 
 .tab-btn {
@@ -106,24 +113,24 @@
   padding: 8px;
   background: transparent;
   border: none;
-  border-radius: 8px;
-  color: var(--text-dim);
+  border-radius: 999px;
+  color: rgba(233, 238, 252, 0.72);
   cursor: pointer;
   font-size: 14px;
   font-weight: 800;
   transition: all 0.2s;
 }
 .tab-btn.active {
-  background: #ffffff;
-  color: var(--primary);
-  box-shadow: 0 8px 18px rgba(23, 32, 51, 0.09);
+  background: linear-gradient(135deg, rgba(91, 108, 255, 0.26), rgba(34, 211, 238, 0.12));
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(91, 108, 255, 0.24);
 }
-.tab-btn:hover:not(.active) { background: rgba(255,255,255,0.65); color: var(--text); }
+.tab-btn:hover:not(.active) { background: rgba(255,255,255,0.08); color: #ffffff; }
 
 .field-label {
   display: block;
   font-size: 13px;
-  color: #4d586e;
+  color: #dbe4ff;
   margin-bottom: 8px;
   font-weight: 600;
   text-transform: uppercase;
@@ -142,7 +149,7 @@
   text-align: center;
   position: relative;
   margin: 18px 0;
-  color: var(--text-dim);
+  color: #94a3b8;
   font-size: 13px;
 }
 .divider::before, .divider::after {
@@ -151,7 +158,7 @@
   top: 50%;
   width: 42%;
   height: 1px;
-  background: var(--border);
+  background: rgba(148, 163, 184, 0.22);
 }
 .divider::before { left: 0; }
 .divider::after { right: 0; }
@@ -171,9 +178,9 @@
   justify-content: space-between;
   font-size: 14px;
   margin-bottom: 6px;
-  color: var(--text-dim);
+  color: #cbd5e1;
 }
-.setting-item strong { color: var(--primary); }
+.setting-item strong { color: #a5b4fc; }
 .setting-item input[type="range"] {
   width: 100%;
   accent-color: var(--primary);
@@ -199,8 +206,48 @@
   grid-column: 1 / -1;
   text-align: center;
   margin-top: 20px;
-  color: #4d586e;
+  color: #94a3b8;
   font-size: 14px;
+}
+
+.home-card .btn-primary {
+  background: linear-gradient(135deg, #5b6cff 0%, #7c3aed 100%);
+  box-shadow: 0 14px 30px rgba(91, 108, 255, 0.26);
+}
+
+.home-card .btn-secondary {
+  background: linear-gradient(135deg, #20c997 0%, #0ea5e9 100%);
+  box-shadow: 0 14px 30px rgba(32, 201, 151, 0.18);
+}
+
+.home-card .btn-outline {
+  background: rgba(255, 255, 255, 0.04);
+  color: #f8fbff;
+  border-color: rgba(91, 108, 255, 0.28);
+}
+
+.home-card .btn-outline:hover {
+  background: rgba(91, 108, 255, 0.14);
+  border-color: rgba(91, 108, 255, 0.54);
+}
+
+.home-card .input {
+  background: #111827;
+  border-color: #334155;
+  color: #ffffff;
+}
+
+.home-card .input::placeholder {
+  color: #94a3b8;
+}
+
+.home-card .input:focus {
+  background: #0f172a;
+  border-color: #5b6cff;
+}
+
+.home-card .btn {
+  color: #ffffff;
 }
 
 @media (max-width: 840px) {
@@ -231,5 +278,9 @@
 
   .join-row {
     flex-direction: column;
+  }
+
+  .home-card {
+    padding: 20px;
   }
 }

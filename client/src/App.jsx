@@ -14,16 +14,6 @@ export default function App() {
   const [settings, setSettings] = useState({});
   const [playerName, setPlayerName] = useState('');
   const [connected, setConnected] = useState(false);
-  const [inviteRoomCode, setInviteRoomCode] = useState('');
-
-  // Check URL for room code on load
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const roomFromUrl = params.get('room');
-    if (roomFromUrl) {
-      setInviteRoomCode(roomFromUrl.trim().toUpperCase());
-    }
-  }, []);
 
   useEffect(() => {
     socket.on('connect', () => setConnected(true));
@@ -160,7 +150,7 @@ export default function App() {
 
   return (
     <Home
-      initialRoomCode={inviteRoomCode}
+      initialRoomCode=""
       onCreateRoom={handleCreateRoom}
       onJoinRoom={handleJoinRoom}
       onBrowseRooms={(name) => {

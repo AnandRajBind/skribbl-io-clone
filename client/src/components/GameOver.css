@@ -4,9 +4,9 @@
   align-items: center;
   justify-content: center;
   background:
-    radial-gradient(circle at 18% 20%, rgba(249, 115, 22, 0.18), transparent 28%),
-    radial-gradient(circle at 82% 12%, rgba(37, 99, 235, 0.16), transparent 26%),
-    linear-gradient(135deg, #fff7e7 0%, #f8fbff 60%, #eef4ff 100%);
+    radial-gradient(circle at 18% 20%, rgba(245, 158, 11, 0.18), transparent 28%),
+    radial-gradient(circle at 82% 12%, rgba(99, 102, 241, 0.18), transparent 26%),
+    linear-gradient(135deg, #0b1120 0%, #111827 60%, #0b1120 100%);
   padding: 20px;
 }
 
@@ -16,6 +16,10 @@
   text-align: center;
   padding: 36px;
   animation: fadeIn 0.5s ease;
+  background: rgba(30, 41, 59, 0.92);
+  color: #f8fafc;
+  border: 1px solid #334155;
+  backdrop-filter: blur(18px);
 }
 
 .go-confetti {
@@ -28,13 +32,13 @@
 .go-title {
   font-size: 40px;
   font-weight: 800;
-  color: var(--ink);
+  color: #f8fafc;
   margin-bottom: 24px;
 }
 
 .go-winner {
-  background: #fff7e7;
-  border: 1px solid #f1d7b0;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.24);
   border-radius: var(--radius);
   padding: 24px;
   margin-bottom: 24px;
@@ -43,15 +47,15 @@
 .winner-crown { font-size: 40px; }
 .winner-avatar { font-size: 52px; margin: 8px 0; }
 .winner-name { font-size: 26px; font-weight: 800; }
-.winner-score { font-size: 20px; color: var(--warning); font-weight: 700; margin: 4px 0; }
-.winner-label { font-size: 16px; color: var(--accent); }
+.winner-score { font-size: 20px; color: #fbbf24; font-weight: 700; margin: 4px 0; }
+.winner-label { font-size: 16px; color: #22c55e; }
 
 .leaderboard { margin-bottom: 28px; }
 
 .lb-title {
   font-size: 18px;
   font-weight: 700;
-  color: #4d586e;
+  color: #cbd5e1;
   text-transform: uppercase;
   letter-spacing: 0;
   margin-bottom: 12px;
@@ -68,20 +72,20 @@
   align-items: center;
   gap: 12px;
   padding: 12px 16px;
-  background: #f8fbff;
-  border-radius: 10px;
-  border: 1px solid var(--border);
+  background: #111827;
+  border-radius: 14px;
+  border: 1px solid #334155;
   transition: transform 0.2s;
 }
 .lb-item:hover { transform: translateY(-1px); }
-.lb-item.rank-1 { border-color: #f5c377; background: #fff7e7; }
-.lb-item.rank-2 { border-color: #cbd5e1; background: #f8fafc; }
-.lb-item.rank-3 { border-color: #d6a074; background: #fff2e8; }
+.lb-item.rank-1 { border-color: rgba(245, 158, 11, 0.32); background: rgba(245, 158, 11, 0.12); }
+.lb-item.rank-2 { border-color: rgba(203, 213, 225, 0.28); background: rgba(255, 255, 255, 0.03); }
+.lb-item.rank-3 { border-color: rgba(251, 146, 60, 0.3); background: rgba(251, 146, 60, 0.1); }
 
 .lb-rank { font-size: 22px; width: 36px; }
 .lb-avatar { font-size: 22px; }
 .lb-name { flex: 1; font-weight: 600; text-align: left; }
-.lb-score { font-weight: 800; color: var(--warning); font-size: 16px; }
+.lb-score { font-weight: 800; color: #fbbf24; font-size: 16px; }
 
 .go-actions {
   display: flex;
